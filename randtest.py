@@ -15,7 +15,7 @@ r = requests.get("https://www.melon.com/",headers=header)
 print(r) #접속이 잘됐는지 확인
 
 soup = BeautifulSoup(r.text, 'html.parser') #html 정보 가지고오기
-print(soup) #가져온 html 데이터 출력
+# print(soup) #가져온 html 데이터 출력
 
 # #conts > div.chart > div > ul > li.on.nth1 > div > ul > li:nth-child(1) > div.rank_cntt > div.rank_info > p > a
 title = soup.select_one('#conts > div.chart > div > ul > li.on.nth1 > div > ul > li:nth-child(1) > div.rank_cntt > div.rank_info > p > a')
@@ -27,4 +27,14 @@ print(title.text)
 title = soup.select_one('#conts > div.chart > div > ul > li.on.nth1 > div > ul > li:nth-child(4) > div.rank_cntt > div.rank_info > p > a')
 print(title.text)
 title = soup.select_one('#conts > div.chart > div > ul > li.on.nth1 > div > ul > li:nth-child(5) > div.rank_cntt > div.rank_info > p > a')
+print(title.text)
+title = soup.select_one('#conts > div.chart > div > ul > li.on.nth1 > div > ul > li:nth-child(6) > div.rank_cntt > div.rank_info > p > a')
+print(title.text)
+title = soup.select_one('#conts > div.chart > div > ul > li.on.nth1 > div > ul > li:nth-child(7) > div.rank_cntt > div.rank_info > p > a')
+print(title.text)
+title = soup.select_one('#conts > div.chart > div > ul > li.on.nth1 > div > ul > li:nth-child(8) > div.rank_cntt > div.rank_info > p > a')
+print(title.text)
+title = soup.select_one('#conts > div.chart > div > ul > li.on.nth1 > div > ul > li:nth-child(9) > div.rank_cntt > div.rank_info > p > a')
+print(title.text)
+title = soup.select_one('#conts > div.chart > div > ul > li.on.nth1 > div > ul > li:nth-child(10) > div.rank_cntt > div.rank_info > p > a')
 print(title.text)
